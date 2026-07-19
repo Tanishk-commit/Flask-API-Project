@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Disease Diagnosis System</title>
+
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: url('https://images.unsplash.com/photo-1588776814546-ec7e1a2b3c6f') no-repeat center center/cover;
+            color: white;
+        }
+
+        /* HEADER */
+        .header {
+            text-align: center;
+            padding: 20px;
+            font-size: 40px;
+            font-weight: bold;
+            background: linear-gradient(to right, maroon, gold);
+            color: white;
+            letter-spacing: 2px;
+        }
+
+        /* MAIN CONTENT */
+        .content {
+            padding: 30px;
+        }
+
+        h2 {
+            color: gold;
+            margin-bottom: 10px;
+        }
+
+        .section {
+            margin-bottom: 30px;
+        }
+
+        /* GRID */
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            gap: 15px;
+        }
+
+        label {
+            background: rgba(0,0,0,0.6);
+            padding: 10px;
+            border-radius: 8px;
+            cursor: pointer;
+        }
+
+        input[type="checkbox"] {
+            margin-right: 8px;
+        }
+
+        /* BUTTON */
+        .btn {
+            display: block;
+            width: 300px;
+            margin: 30px auto;
+            padding: 15px;
+            font-size: 18px;
+            background: gold;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            font-weight: bold;
+        }
+
+        .btn:hover {
+            background: orange;
+        }
+
+        /* RESULT */
+        .result {
+            text-align: center;
+            font-size: 35px;
+            font-weight: bold;
+            color: red;
+            margin-top: 20px;
+        }
+
+        .gold-text {
+            color: gold;
+            font-size: 40px;
+        }
+
+    </style>
+</head>
+
+<body>
+
+<div class="header">
+    🩺 DISEASE DIAGNOSTIC SYSTEM
+</div>
+
+<div class="content">
+
+    <!-- SYMPTOMS -->
+    <div class="section">
+    <h2>Select Symptoms</h2>
+    <div class="grid">
+        <label><input type="checkbox" value="fever"> Fever</label>
+        <label><input type="checkbox" value="cough"> Cough</label>
+        <label><input type="checkbox" value="rash"> Rash</label>
+        <label><input type="checkbox" value="headache"> Headache</label>
+        <label><input type="checkbox" value="fatigue"> Fatigue</label>
+        <label><input type="checkbox" value="vomiting"> Vomiting</label>
+        <label><input type="checkbox" value="diarrhea"> Diarrhea</label>
+        <label><input type="checkbox" value="chest_pain"> Chest Pain</label>
+        <label><input type="checkbox" value="sore_throat"> Sore Throat</label>
+        <label><input type="checkbox" value="body_ache"> Body Ache</label>
+        <label><input type="checkbox" value="loss_of_smell"> Loss of Smell</label>
+        <label><input type="checkbox" value="runny_nose"> Runny Nose</label>
+        <label><input type="checkbox" value="chills"> Chills</label>
+        <label><input type="checkbox" value="breathing_issue"> Breathing Issue</label>
+        <label><input type="checkbox" value="joint_pain"> Joint Pain</label>
+    </div>
+</div>
+
+    <!-- DISEASES -->
+   <div class="section">
+    <h2>Possible Diseases</h2>
+    <div class="grid">
+        <label><input type="checkbox" disabled> Flu</label>
+        <label><input type="checkbox" disabled> Dengue</label>
+        <label><input type="checkbox" disabled> Measles</label>
+        <label><input type="checkbox" disabled> Pneumonia</label>
+        <label><input type="checkbox" disabled> Covid-19</label>
+        <label><input type="checkbox" disabled> Typhoid</label>
+        <label><input type="checkbox" disabled> Malaria</label>
+        <label><input type="checkbox" disabled> Food Poisoning</label>
+        <label><input type="checkbox" disabled> Cold</label>
+        <label><input type="checkbox" disabled> Arthritis</label>
+    </div>
+</div>
+
+    <!-- BUTTON -->
+    <button class="btn" onclick="diagnose()">Check Disease</button>
+
+    <!-- RESULT -->
+    <div class="result">
+        <span class="gold-text">Diagnosis:</span>
+        <div id="result"></div>
+    </div>
+
+</div>
+
+<script src="/static/script.js"></script>
+
+</body>
+</html>
